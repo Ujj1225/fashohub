@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+    border: 0.1px solid black;
+} */
+
+.custom-indicator {
+  background-color: gray;
+}
+
+.custom-indicator[data-active] {
+  background-color: red;
+}
+
+.copilotKitButton {
+  border-radius: 20px;
+  background-color: #4a90e2; 
+  color: white;
+}
+
+.copilotKitWindow {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  background-color: #e9f2fb; 
+}
+
+.copilotKitHeader {
+  background-color: #2a6ea1; 
+  color: #fff;
+}
+
+.copilotKitInput {
+  /* background-color: #f0f8ff; */
+  border-radius: 1px;
+  border: 1px solid #a0c4ff;
+}
+
+
+.copilotKitResponseButton{
+  display: none;
+}
