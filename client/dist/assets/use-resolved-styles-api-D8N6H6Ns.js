@@ -1,0 +1,1 @@
+import{n as r}from"./index-Dn45rCbr.js";import{r as a,l as m}from"./Skeleton-9Y7E4ClX.js";function v({classNames:t,styles:l,props:e,stylesCtx:s}){const o=r();return{resolvedClassNames:a({theme:o,classNames:t,props:e,stylesCtx:s||void 0}),resolvedStyles:m({theme:o,styles:l,props:e,stylesCtx:s||void 0})}}export{v as u};
