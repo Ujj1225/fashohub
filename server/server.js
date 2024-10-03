@@ -10,6 +10,22 @@ connectDB();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
+const { errorHandler, notFound } = require("./middleware/errorMiddleware.js");
+
+const wishList = require("./routes/wishlistRoutes.js");
+const userRoutes = require("./routes/userRoutes.js");
+const otpRoutes = require("./routes/otpRoutes.js");
+const productRoutes = require("./routes/productRoutes.js");
+const vendorRoutes = require("./routes/vendorRoutes.js");
+const uploadRoutes = require("./routes/uploadRoutes.js");
+const orderRoutes = require("./routes/orderRoutes.js");
+const categoryRoutes = require("./routes/categoryRoutes.js");
+const bagRoutes = require("./routes/bagRoutes.js");
+const deliveryRoutes = require("./routes/deliveryRoutes.js");
+const paymentRoutes = require("./routes/paymentRoutes.js");
+const statsRoutes = require("./routes/statsRoutes.js");
+const bannerRoutes = require("./routes/bannerRoutes.js");
+
 const {
   CopilotRuntime,
   GroqAdapter,
@@ -97,17 +113,23 @@ app.use("/api/copilotkit", async (req, res, next) => {
 //   }
 // });
 
-app.use("/api/users", require("./routes/userRoutes"));
-app.use("/api/products", require("./routes/productRoutes"));
-app.use("/api/vendors", require("./routes/vendorRoutes"));
-app.use("/api/upload", require("./routes/uploadRoutes"));
-app.use("/api/orders", require("./routes/orderRoutes"));
-app.use("/api/categories", require("./routes/categoryRoutes"));
-app.use("/api/payment", require("./routes/paymentRoutes"));
+app.use("/api/users", userRoutes);
+app.use("/api/users", wishList);
+app.use("/api/users", otpRoutes);
+app.use("/api/users/bag", bagRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/vendors", vendorRoutes);
+app.use("/api/upload", uploadRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/delivery", deliveryRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/stats", statsRoutes);
+app.use("/api/banner", bannerRoutes);
 
-app.use(require("./middleware/errorMiddleware").notFound);
-app.use(require("./middleware/errorMiddleware").errorHandler);
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running at ${port}`);
 });
