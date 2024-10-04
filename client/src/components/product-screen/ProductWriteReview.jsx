@@ -4,6 +4,8 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal } from "@mantine/core";
 import { useWriteAReviewMutation } from "../../store/slices/productsApiSlice";
 import { toast } from "react-toastify";
+import ReviewTextArea from "../copilotkit/reviewTextArea";
+
 const ProductWriteReview = ({ productId, productRefetch }) => {
   const [opened, { open, close }] = useDisclosure(false);
   const [rating, setRating] = useState(5);
@@ -22,6 +24,9 @@ const ProductWriteReview = ({ productId, productRefetch }) => {
       toast.error(error?.data?.message || error?.error);
     }
   };
+    const handleReviewChange = (value) => {
+      setComment(value);
+    };
 
   return (
     <div>
@@ -42,7 +47,7 @@ const ProductWriteReview = ({ productId, productRefetch }) => {
             <option value="1">1 - Terrible</option>
           </select>
           <h2 className="font-bold text-sm mt-2">Write a Review</h2>
-          <textarea
+          {/* <textarea
             name="comment"
             rows="4"
             className="border px-2 py-1 rounded"
@@ -51,7 +56,8 @@ const ProductWriteReview = ({ productId, productRefetch }) => {
             onChange={(e) => setComment(e.target.value)}
             required
             maxLength={200}
-          ></textarea>
+          ></textarea> */}
+          <ReviewTextArea value={comment} onReviewChange={handleReviewChange} />
           <button
             type="submit"
             className="mt-2 border py-1 px-2 rounded bg-[#FF3E6B] text-white font-bold"
