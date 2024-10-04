@@ -18,18 +18,18 @@
 
 .copilotKitButton {
   border-radius: 20px;
-  background-color: #4a90e2; 
+  background-color: #4a90e2;
   color: white;
 }
 
 .copilotKitWindow {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  background-color: #e9f2fb; 
+  background-color: #e9f2fb;
 }
 
 .copilotKitHeader {
-  background-color: #2a6ea1; 
+  background-color: #2a6ea1;
   color: #fff;
 }
 
@@ -39,11 +39,17 @@
   border: 1px solid #a0c4ff;
 }
 
-/* .copilotKitMessages{
-  
-} */
+.copilotKitMessage.copilotKitUserMessage {
+  background: linear-gradient(to top, #0c3366 0%, #537895 100%);
+}
 
+.copilotKitMessage.copilotKitAssistantMessage {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.copilotKitWindow {
+  size: 10px;
+}
 
-.copilotKitResponseButton{
+.copilotKitResponseButton {
   display: none;
 }
