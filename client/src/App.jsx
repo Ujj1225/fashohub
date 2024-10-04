@@ -1,14 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AppRoute from "./routes/AppRoute";
 import { ToastContainer } from "react-toastify";
-import {
-  MantineProvider,
-  Card,
-  Image,
-  Text,
-  Group,
-  Button,
-} from "@mantine/core";
+import { MantineProvider, Card, Image, Text } from "@mantine/core";
 import { CopilotPopup } from "@copilotkit/react-ui";
 import { useCopilotReadable, useCopilotAction } from "@copilotkit/react-core";
 import { useProducts } from "../hooks/useProducts";
@@ -35,6 +28,10 @@ const App = () => {
   //     setLoading(false);
   //   }
   // }, [bag]);
+
+  // {
+  //   console.log(products);
+  // }
 
   useCopilotReadable({
     description: "The state of the products List",
@@ -130,8 +127,8 @@ const App = () => {
   });
 
   useCopilotAction({
-    name: "showUserProducts",
-    description: "Displays products",
+    name: "showProducts",
+    description: "Show products based on category",
     parameters: [
       {
         name: "category",
@@ -301,7 +298,12 @@ const App = () => {
         <AppRoute />
         <ToastContainer className="mt-10" />
         <CopilotPopup
-          instructions="You are a knowledgeable assistant specializing in shopping. Provide helpful and accurate recommendations for products, deals, and shopping tips to enhance the user's shopping experience.
+          instructions="You are a knowledgeable assistant specializing in shopping. If they say husband then make sure the category is men dont show products for kids. If its wife then make sure the category is women. If its brother, cousin or something like that take it to kids and men as well. Remember make category as per request. 
+
+          If they say display or show then display the image of product. If the request is tell then just show in a simple nicely formatted list.
+
+          Provide helpful and accurate recommendations for products, deals, and shopping tips to enhance the user's shopping experience.
+
           When displaying products format it and use lines in between the product to make them look nice and easily readable. Add a new line between each product. 
           
           Finally remember to be polite and ask if you want to place order.  
