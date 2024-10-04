@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppRoute from "./routes/AppRoute";
 import { ToastContainer } from "react-toastify";
 import { MantineProvider, Card, Image, Text } from "@mantine/core";
@@ -115,7 +115,7 @@ const App = () => {
         });
 
         const data = await response.json();
-
+        console.log(data);
         return {
           message: `Here are the filtered products for category ${primaryCategory}:`,
           products: data,
@@ -300,7 +300,7 @@ const App = () => {
         <CopilotPopup
           instructions="You are a knowledgeable assistant specializing in shopping. If they say husband then make sure the category is men dont show products for kids. If its wife then make sure the category is women. If its brother, cousin or something like that take it to kids and men as well. Remember make category as per request. 
 
-          If they say display or show then display the image of product. If the request is tell then just show in a simple nicely formatted list.
+          If they say display or show then display the image of product.f the request is tell then just show in a simple nicely formatted list.
 
           Provide helpful and accurate recommendations for products, deals, and shopping tips to enhance the user's shopping experience.
 
