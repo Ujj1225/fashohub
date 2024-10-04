@@ -1,20 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AppRoute from "./routes/AppRoute";
 import { ToastContainer } from "react-toastify";
-import { MantineProvider } from "@mantine/core";
+import {
+  MantineProvider,
+  Card,
+  Image,
+  Text,
+  Group,
+  Button,
+} from "@mantine/core";
 import { CopilotPopup } from "@copilotkit/react-ui";
 import { useCopilotReadable, useCopilotAction } from "@copilotkit/react-core";
 import { useProducts } from "../hooks/useProducts";
+import LoadingView from "./components/loading/loading";
 // import { useNavigate } from "react-router-dom";
 
 import "@copilotkit/react-ui/styles.css";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
 import "react-toastify/ReactToastify.css";
+import { useBag } from "../hooks/useBag";
 
 const App = () => {
   // const navigate = useNavigate();
+  const [bagData, setBagData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const bag = useBag();
   const products = useProducts();
+
+  useEffect(() => {
+    if (bag) {
+      setBagData(bag);
+      setLoading(false);
+    }
+  }, [bag]);
 
   useCopilotReadable({
     description: "The state of the products List",
@@ -106,6 +126,72 @@ const App = () => {
       } catch (error) {
         return { message: "Error fetching filtered products." };
       }
+    },
+  });
+
+  useCopilotAction({
+    name: "showUserBag",
+    description: "Displays the user's bag items",
+    parameters: [],
+    render: ({ status }) => {
+      if (loading || status === "inProgress") {
+        return <LoadingView />;
+      }
+
+      if (!bagData || bagData.length === 0) {
+        return <div>No items in the bag.</div>;
+      }
+
+      return (
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "16px",
+          }}
+        >
+          {bagData.products.map((item) => (
+            <Card
+              key={item._id}
+              shadow="sm"
+              padding="lg"
+              radius="md"
+              withBorder
+            >
+              <Card.Section>
+                <Image src={item.image} height={160} alt={item.name} />
+              </Card.Section>
+
+              <Group position="apart" mt="md" mb="xs">
+                <Text weight={500}>{item.name}</Text>
+                <Text>${item.sellingPrice}</Text>
+              </Group>
+
+              <Text size="sm">
+                Brand: {item.brand}, Size: {item.size}, Quantity:{" "}
+                {item.quantity}
+              </Text>
+
+              <Button
+                variant="light"
+                color="blue"
+                fullWidth
+                mt="md"
+                radius="md"
+              >
+                View Item
+              </Button>
+            </Card>
+          ))}
+
+          <Card shadow="sm" padding="lg" radius="md" withBorder>
+            <Text weight={600}>Payment Method: {bagData.payment}</Text>
+            <Text>Item Price: ${bagData.itemPrice}</Text>
+            <Text>Shipping Price: ${bagData.shippingPrice}</Text>
+            <Text>Total Price: ${bagData.totalPrice}</Text>
+          </Card>
+        </div>
+      );
     },
   });
 
