@@ -36,9 +36,13 @@ Fashohub is a fashion e-commerce platform offering trendy and affordable clothin
    Chatbots streamline user interactions by automating product recommendations, filtering, and customer support. This aligns perfectly with Fashohub’s goal of making shopping easier and more personalized. Research shows chatbots improve service accessibility and task efficiency, which enhances overall customer satisfaction.  
    [Source of Claim](www.theseus.fi/bitstream/handle/10024/802337/A%20Feasibility%20Study%20of%20Available%20Natural%20Language%20Chatbot%20Technologies.pdf?sequence=2)
 
+
+
 2. **Boosting Customer Trust and Engagement**  
    Chatbots that are friendly and empathetic make users feel more comfortable and engaged, increasing their likelihood of staying on the platform.CopilotKit helps Fashohub simplify product discovery and provides personalized suggestions, making shopping enjoyable and efficient.  
    [Source of claim](https://www.emerald.com/insight/content/doi/10.1108/INTR-08-2020-0460/full/html)
+
+
 
 This research-backed facts show how integration of copilotkit in Fashohub makes it a more user-friendly and smart e-commerce platform.
 
@@ -124,4 +128,19 @@ FTP_PASSWORD=******
 FTP_PORT=21
 ```
 
-Now, you can view your frontend running at `localhost:5173` and backend running at `localhost:8001`
+You are all set to use the application.
+You can see your frontend running at `localhost:5173` and backend running at `localhost:8001`
+
+## Dependencies
+
+### Frontend
+
+- For frontend can be found in [package.json](./client/package.json)
+
+### Backend
+
+- For backend can be found in [package.json](./server/package.json)
+
+## License
+
+This project is licensed under the [MIT License](/LICENSE).
