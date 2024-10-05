@@ -5,12 +5,22 @@
 Fashohub is a fashion e-commerce platform offering trendy and affordable clothing aiming to provide a seamless shopping experience, from product discovery to secure checkout and delivery. The platform consists of three major roles:
 
 - User Role: This role is for the customers who wish to shop online using our platform
-
+ <details>
+    <summary> User Layout </summary>
+    <img src="https://github.com/Ujj1225/fashohub/blob/main/client/src/images/user_layout.png" width=750/>
+  </details>
 
 - Admin Role: This role is for the admins providing them with full access of managing the platform
-
+ <details>
+    <summary> Admin Layout </summary>
+    <img src="https://github.com/Ujj1225/fashohub/blob/main/client/src/images/admin_layout.png" width=750/>
+  </details>
 
 - Vendor Role: This role is for the shops, bussinesses, etc. who wish to sell their products through our platform.
+ <details>
+    <summary> Vendor Layout </summary>
+    <img src="https://github.com/Ujj1225/fashohub/blob/main/client/src/images/vendor_layout1.png" width=750/>
+  </details>
 
 #### Features
 
