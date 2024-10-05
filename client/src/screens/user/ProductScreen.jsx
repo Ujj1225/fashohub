@@ -19,6 +19,7 @@ import ProductReviews from "../../components/product-screen/ProductReviews.jsx";
 import ProductDescription from "../../components/product-screen/ProductDescription.jsx";
 import ProductWriteReview from "../../components/product-screen/ProductWriteReview.jsx";
 import ProductDetails from "../../components/product-screen/ProductDetails.jsx";
+import ProductRecommendations from "../../components/copilotkit/copilotTask.jsx";
 
 const ProductScreen = () => {
   const { id } = useParams();
@@ -212,6 +213,7 @@ const ProductScreen = () => {
           </div>
         </div>
       )}
+      <ProductRecommendations />
     </div>
   );
 };

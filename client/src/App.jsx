@@ -292,6 +292,37 @@ const App = () => {
     },
   });
 
+  useCopilotAction({
+    name: "proceedToOrder",
+    description: "Navigate to the product page to place an order.",
+    parameters: [
+      {
+        name: "productId",
+        type: "string",
+        required: true,
+      },
+    ],
+    async handler({ productId }) {
+      try {
+        if (!productId) {
+          return { message: "No product ID provided!" };
+        }
+
+        const productUrl = `http://localhost:5173/product/${productId}`;
+
+        window.location.href = productUrl;
+
+        return {
+          message: `Proceeding to order. Navigating to ${productUrl}`,
+          url: productUrl, 
+        };
+      } catch (error) {
+        console.error("Error proceeding to order:", error);
+        return { message: "Error proceeding to the product page." };
+      }
+    },
+  });
+
   return (
     <MantineProvider>
       <div className="font-custom">
