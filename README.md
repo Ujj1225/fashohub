@@ -84,6 +84,23 @@ Our platform solves these problems by offering a user-friendly interface that si
     7. Copilotkit
 
 ## Demo
+https://github.com/user-attachments/assets/4a9958bb-0397-4e75-b8c0-0bbb28410a5c
+
+
+## UI/UX
+- To make the demo video short I have skipped certain portion showing category page, skeleton, mantine carousel for products, filter, etc
+- Relevant video
+  [Product Carousel](https://github.com/user-attachments/assets/4e155d9b-2149-4a44-ba34-8e346fd650d4)
+- Relevant images
+<details>
+   <summary>Category Page</summary>
+   <img src="https://github.com/Ujj1225/fashohub/blob/main/client/src/images/f1.png" width=750/>
+ </details>
+ <details>
+   <summary>Skeleton</summary>
+   <img src="https://github.com/Ujj1225/fashohub/blob/main/client/src/images/f2.png" width=750/>
+ </details>
+
 
 ## Installation
 
