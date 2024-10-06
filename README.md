@@ -1,5 +1,35 @@
 # Fashohub
 
+# <p align="center"><img src="https://github.com/Ujj1225/fashohub/blob/main/client/src/images/user_layout.png" width=300 /></p>
+
+<p align="center">
+    <p align="center">
+        <a href="https://github.com/Ujj1225/fashohub" target="blank">
+            <img src="https://img.shields.io/github/watchers/Ujj1225/fashohub?style=for-the-badge&logo=appveyor" alt="Watchers"/>
+        </a>
+        <a href="https://github.com/Ujj1225/fashohub/fork" target="blank">
+            <img src="https://img.shields.io/github/forks/Ujj1225/fashohub?style=for-the-badge&logo=appveyor" alt="Forks"/>
+        </a>
+        <a href="https://github.com/Ujj1225/fashohub/stargazers" target="blank">
+            <img src="https://img.shields.io/github/stars/Ujj1225/fashohub?style=for-the-badge&logo=appveyor" alt="Star"/>
+        </a>
+    </p>
+    <p align="center">
+        <a href="https://github.com/Ujj1225/fashohub/issues" target="blank">
+            <img src="https://img.shields.io/github/issues/Ujj1225/fashohub?style=for-the-badge&logo=appveyor" alt="Issue"/>
+        </a>
+        <a href="https://github.com/Ujj1225/fashohub/pulls" target="blank">
+            <img src="https://img.shields.io/github/issues-pr/Ujj1225/fashohub?style=for-the-badge&logo=appveyor" alt="Open Pull Request"/>
+        </a>
+    </p>
+    <p align="center">
+        <a href="https://github.com/Ujj1225/fashohub/blob/master/LICENSE" target="blank">
+            <img src="https://img.shields.io/github/license/Ujj1225/fashohub?style=for-the-badge&logo=appveyor" alt="License" />
+        </a>
+    </p>
+</p>
+
+
 ## About the project
 
 Fashohub is a fashion e-commerce platform offering trendy and affordable clothing aiming to provide a seamless shopping experience, from product discovery to secure checkout and delivery. The platform consists of three major roles:
