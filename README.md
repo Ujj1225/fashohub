@@ -84,7 +84,9 @@ Our platform solves these problems by offering a user-friendly interface that si
     7. Copilotkit
 
 ## Demo
-https://github.com/user-attachments/assets/cd077a03-925f-459b-8bda-87a2ef823e1e
+https://github.com/user-attachments/assets/4a9958bb-0397-4e75-b8c0-0bbb28410a5c
+
+- To make the video short I have skipped certain portion showing category page, skeleton, mantine carousel for products, filter, etc
 
 ## Installation
 
