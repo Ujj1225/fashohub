@@ -84,6 +84,7 @@ Our platform solves these problems by offering a user-friendly interface that si
     7. Copilotkit
 
 ## Demo
+https://github.com/user-attachments/assets/cd077a03-925f-459b-8bda-87a2ef823e1e
 
 ## Installation
 
