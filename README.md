@@ -63,8 +63,8 @@ This research-backed facts show how integration of copilotkit in Fashohub makes 
 - **Render method for product cards:**  
   Dynamically displays product cards, making browsing products smooth and responsive.
 
-- **Product recommendations:**  
-  Provides suggestions for similar products, helping users find what they like and increasing engagement.
+- **Product recommendations (Future Plan):**  
+  This is a feature that is yet to be integrated. Code for viewed products and copilotTask is ready but due to some time and support constraints I couldn't get it done for now. This feature provides suggestions for similar products (giving context of viewed products to copilotkit), helping users find what they like and increasing engagement.
 
 
 ## Problem Statement and Solution

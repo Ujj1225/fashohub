@@ -22,23 +22,20 @@ export function ProductRecommendations() {
           },
         ],
 
-        implementation: async (viewedProducts) => {
-          if (viewedProducts.length === 0) {
-            return "No products viewed yet to recommend similar products.";
-          }
-          
+        implementation: async (message) => {
+          console.log(message);
         },
       },
     ],
   });
 
   const executeTask = async () => {
-    await recommendationTask.run(context, { viewedProducts });
+    await recommendationTask.run(context, {viewedProducts});
   };
-    const handleClear = () => {
-      handleViewClear();
-      console.log("User logged out, viewed products cleared.");
-    };
+  const handleClear = () => {
+    handleViewClear();
+    console.log("Viewed products cleared.");
+  };
 
   return (
     <Box className="mt-4 ml-4 mr-4 flex justify-between">

@@ -213,7 +213,7 @@ const ProductScreen = () => {
           </div>
         </div>
       )}
-      <ProductRecommendations />
+      {/* <ProductRecommendations /> */}
     </div>
   );
 };
